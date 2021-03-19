@@ -22,7 +22,7 @@ RUN yarn build
 
 # ohbug-web-app
 COPY ./docker/nginx/conf.d /etc/nginx/conf.d
-ADD https://github.com/ohbug-org/ohbug-web-app/releases/latest/download/dist.tar.gz /usr/share/nginx/html
+ADD https://raw.githubusercontent.com/xunge0613/ohbug-web-app/master/dist.tar.gz /usr/share/nginx/html
 RUN tar -zxf /usr/share/nginx/html/dist.tar.gz -C /usr/share/nginx/html && rm /usr/share/nginx/html/dist.tar.gz
 
 EXPOSE 6660 6666 80 443
